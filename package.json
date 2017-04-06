@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"cordova-gen-icon",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "cordova-gen-icon",
+    "description": "api documentation for [cordova-gen-icon (v0.4.6)](https://bitbucket.org/ntakimura/cordova-gen-icon#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-cordova-gen-icon.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cordova-gen-icon) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cordova-gen-icon.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cordova-gen-icon)",
     "devDependencies": {
         "cordova-gen-icon": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-cordova-gen-icon",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-cordova-gen-icon",
+    "keywords": [
+        "documentation",
+        "cordova-gen-icon"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_cordova_gen_icon.js",
+    "name": "npmdoc-cordova-gen-icon",
+    "nameAlias": "npmdoc_cordova_gen_icon",
+    "nameOriginal": "npmdoc-cordova-gen-icon",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-cordova-gen-icon"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
