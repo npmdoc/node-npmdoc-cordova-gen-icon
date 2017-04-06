@@ -1,0 +1,1441 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://bitbucket.org/ntakimura/cordova-gen-icon#readme"
+
+    >cordova-gen-icon (v0.4.6)</a>
+</h1>
+<h4>Apache Cordova Icon Generator</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-gen-icon">module cordova-gen-icon</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.</span>CordovaGenIcon
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.</span>CordovaGenIcon.super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.generate">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.</span>generate
+            <span class="apidocSignatureSpan">(options, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-gen-icon.</span>CordovaGenIcon.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-gen-icon.</span>CordovaGenIcon.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-gen-icon.</span>GenIcon</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-gen-icon.</span>PhoneGapGenIcon</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-gen-icon.CordovaGenIcon">module cordova-gen-icon.CordovaGenIcon</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.CordovaGenIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.</span>CordovaGenIcon
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-gen-icon.CordovaGenIcon.prototype">module cordova-gen-icon.CordovaGenIcon.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateAmazonFireOSIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.prototype.</span>generateAmazonFireOSIcon
+            <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateAndroidIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.prototype.</span>generateAndroidIcon
+            <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateFirefoxOSIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.prototype.</span>generateFirefoxOSIcon
+            <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateIOSIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.prototype.</span>generateIOSIcon
+            <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateWindowsPhone8Icon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.prototype.</span>generateWindowsPhone8Icon
+            <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-gen-icon.CordovaGenIcon.super_">module cordova-gen-icon.CordovaGenIcon.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.super_">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-gen-icon.CordovaGenIcon.super_.prototype">module cordova-gen-icon.CordovaGenIcon.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.convert">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>convert
+            <span class="apidocSignatureSpan">(src, dest, width, height, options, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generate">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generate
+            <span class="apidocSignatureSpan">(clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateAmazonFireOSIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generateAmazonFireOSIcon
+            <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateAndroidIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generateAndroidIcon
+            <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateFirefoxOSIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generateFirefoxOSIcon
+            <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateIOSIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generateIOSIcon
+            <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateWindowsPhone8Icon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generateWindowsPhone8Icon
+            <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.mkdir">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>mkdir
+            <span class="apidocSignatureSpan">(dir, clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.prepare">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>prepare
+            <span class="apidocSignatureSpan">(clbk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.resize">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>resize
+            <span class="apidocSignatureSpan">(src, dests, options, clbk)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-gen-icon.GenIcon">module cordova-gen-icon.GenIcon</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.GenIcon.GenIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.</span>GenIcon
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-gen-icon.PhoneGapGenIcon">module cordova-gen-icon.PhoneGapGenIcon</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-gen-icon.PhoneGapGenIcon.PhoneGapGenIcon">
+            function <span class="apidocSignatureSpan">cordova-gen-icon.</span>PhoneGapGenIcon
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-gen-icon" id="apidoc.module.cordova-gen-icon">module cordova-gen-icon</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.</span>CordovaGenIcon
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CordovaGenIcon(options) {
+  this.verbose = (options &#x26;&#x26; options.verbose !== undefined &#x26;&#x26; options.silent === undefined) ?
+      options.verbose : false;
+  this.silent = (options &#x26;&#x26; options.silent !== undefined) ?
+      options.silent : false;
+  this.project = (options &#x26;&#x26; options.project !== undefined) ?
+      options.project : &#x22;.&#x22;;
+  this.icon = (options &#x26;&#x26; options.icon !== undefined) ?
+      options.icon : undefined;
+
+  this.targets = [];
+  if (options &#x26;&#x26; options.android === true) {
+    this.targets.push(&#x22;android&#x22;);
+  }
+  if (options &#x26;&#x26; options.ios === true) {
+    this.targets.push(&#x22;ios&#x22;);
+  }
+  if (options &#x26;&#x26; options.firefoxos === true) {
+    this.targets.push(&#x22;firefoxos&#x22;);
+  }
+  if (options &#x26;&#x26; options.amazonfireos === true) {
+    this.targets.push(&#x22;amazon-fireos&#x22;);
+  }
+  if (options &#x26;&#x26; options.windowsphone8 === true) {
+    this.targets.push(&#x22;wp8&#x22;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Function} clbk callback function
+ */
+function generate(options, clbk) {
+  if (clbk === undefined) {
+    clbk = options;
+  }
+
+  var generator = new genicon.<span class="apidocCodeKeywordSpan">CordovaGenIcon</span>(options);
+  generator.generate(function(err) {
+    if (typeof clbk === &#x22;function&#x22;) {
+      clbk(err);
+    }
+  });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.</span>CordovaGenIcon.super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GenIcon() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.generate" id="apidoc.element.cordova-gen-icon.generate">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.</span>generate
+        <span class="apidocSignatureSpan">(options, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generate(options, clbk) {
+  if (clbk === undefined) {
+    clbk = options;
+  }
+
+  var generator = new genicon.CordovaGenIcon(options);
+  generator.generate(function(err) {
+    if (typeof clbk === &#x22;function&#x22;) {
+      clbk(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* @file
+* cordova-gen-icon is Apache Cordova Icon Generator node module.
+* It generates the icon files for your project.
+*
+* @example
+* var genicon = require(&#x22;cordova-gen-icon&#x22;);
+* genicon.<span class="apidocCodeKeywordSpan">generate</span>(function(err) {
+*   if (err) {
+*     console.error(err);
+*   }
+* });
+* @author Naoki Takimura &#x3c;n.takimura@gmail.com&#x3e;
+*/
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-gen-icon.CordovaGenIcon" id="apidoc.module.cordova-gen-icon.CordovaGenIcon">module cordova-gen-icon.CordovaGenIcon</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.CordovaGenIcon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.CordovaGenIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.</span>CordovaGenIcon
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CordovaGenIcon(options) {
+  this.verbose = (options &#x26;&#x26; options.verbose !== undefined &#x26;&#x26; options.silent === undefined) ?
+      options.verbose : false;
+  this.silent = (options &#x26;&#x26; options.silent !== undefined) ?
+      options.silent : false;
+  this.project = (options &#x26;&#x26; options.project !== undefined) ?
+      options.project : &#x22;.&#x22;;
+  this.icon = (options &#x26;&#x26; options.icon !== undefined) ?
+      options.icon : undefined;
+
+  this.targets = [];
+  if (options &#x26;&#x26; options.android === true) {
+    this.targets.push(&#x22;android&#x22;);
+  }
+  if (options &#x26;&#x26; options.ios === true) {
+    this.targets.push(&#x22;ios&#x22;);
+  }
+  if (options &#x26;&#x26; options.firefoxos === true) {
+    this.targets.push(&#x22;firefoxos&#x22;);
+  }
+  if (options &#x26;&#x26; options.amazonfireos === true) {
+    this.targets.push(&#x22;amazon-fireos&#x22;);
+  }
+  if (options &#x26;&#x26; options.windowsphone8 === true) {
+    this.targets.push(&#x22;wp8&#x22;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Function} clbk callback function
+ */
+function generate(options, clbk) {
+  if (clbk === undefined) {
+    clbk = options;
+  }
+
+  var generator = new genicon.<span class="apidocCodeKeywordSpan">CordovaGenIcon</span>(options);
+  generator.generate(function(err) {
+    if (typeof clbk === &#x22;function&#x22;) {
+      clbk(err);
+    }
+  });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GenIcon() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-gen-icon.CordovaGenIcon.prototype" id="apidoc.module.cordova-gen-icon.CordovaGenIcon.prototype">module cordova-gen-icon.CordovaGenIcon.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateAmazonFireOSIcon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateAmazonFireOSIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.prototype.</span>generateAmazonFireOSIcon
+        <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateAmazonFireOSIcon = function (name, src, platforms, clbk) {
+  var dests = [{
+      dest: platforms + &#x22;/amazon-fireos/res/drawable/icon.png&#x22;,
+      width: 96, height: 96
+  }, {
+      dest: platforms + &#x22;/amazon-fireos/res/drawable-ldpi/icon.png&#x22;,
+      width: 48, height: 48
+  }, {
+      dest: platforms + &#x22;/amazon-fireos/res/drawable-mdpi/icon.png&#x22;,
+      width: 48, height: 48
+  }, {
+      dest: platforms + &#x22;/amazon-fireos/res/drawable-hdpi/icon.png&#x22;,
+      width: 72, height: 72
+  }, {
+      dest: platforms + &#x22;/amazon-fireos/res/drawable-xhdpi/icon.png&#x22;,
+      width: 96, height: 96
+  }];
+
+  this.resize(src, dests, clbk);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _generate(err);
+  });
+} else if (target === &#x22;ios&#x22;) {
+  self.generateIOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;amazon-fireos&#x22;) {
+  self.<span class="apidocCodeKeywordSpan">generateAmazonFireOSIcon</span>(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;firefoxos&#x22;) {
+  self.generateFirefoxOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;wp8&#x22;) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateAndroidIcon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateAndroidIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.prototype.</span>generateAndroidIcon
+        <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateAndroidIcon = function (name, src, platforms, clbk) {
+  var dests = [{
+      dest: platforms + &#x22;/android/res/drawable/icon.png&#x22;,
+      width: 96, height: 96
+  }, {
+      dest: platforms + &#x22;/android/res/drawable-ldpi/icon.png&#x22;,
+      width: 36, height: 36
+  }, {
+      dest: platforms + &#x22;/android/res/drawable-mdpi/icon.png&#x22;,
+      width: 48, height: 48
+  }, {
+      dest: platforms + &#x22;/android/res/drawable-hdpi/icon.png&#x22;,
+      width: 72, height: 72
+  }, {
+      dest: platforms + &#x22;/android/res/drawable-xhdpi/icon.png&#x22;,
+      width: 96, height: 96
+  }];
+
+  this.resize(src, dests, clbk);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (exists) {
+if (!self.silent) {
+  console.log();
+  console.log(&#x22;Generate &#x22; + target + &#x22; icon image files&#x22;);
+}
+
+if (target === &#x22;android&#x22;) {
+  self.<span class="apidocCodeKeywordSpan">generateAndroidIcon</span>(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;ios&#x22;) {
+  self.generateIOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;amazon-fireos&#x22;) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateFirefoxOSIcon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateFirefoxOSIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.prototype.</span>generateFirefoxOSIcon
+        <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateFirefoxOSIcon = function (name, src, platforms, clbk) {
+  var self = this,
+      dests = [{
+      dest: platforms + &#x22;/firefoxos/www/img/icon-30.png&#x22;,
+      width: 30, height: 30
+  }, {
+      dest: platforms + &#x22;/firefoxos/www/img/icon-60.png&#x22;,
+      width: 60, height: 60
+  }, {
+      dest: platforms + &#x22;/firefoxos/www/img/icon-128.png&#x22;,
+      width: 128, height: 128
+  }];
+
+  this.resize(src, dests, {
+    circle: true
+  }, function(err) {
+    var i, dest;
+
+    if (!self.silent) {
+      if (err === null || err === undefined) {
+        console.log(&#x22;Insert &#x27;icons&#x27; field into &#x27;&#x22; + platforms + &#x22;/firefoxos/www/manifest.web&#x27;.&#x22;);
+        console.log();
+        console.log(&#x22;\&#x22;icons:\&#x22;: {&#x22;);
+        for (i in dests) {
+          dest = dests[i];
+          console.log(&#x22;  \&#x22;&#x22; + dest.width + &#x22;\&#x22;: &#x22; +
+              dest.dest.replace(platforms + &#x22;/firefoxos/www&#x22;, &#x22;&#x22;) +
+              ((Number(i) === dests.length - 1) ? &#x22;&#x22; : &#x22;,&#x22;));
+        }
+        console.log(&#x22;}&#x22;);
+        console.log();
+      }
+    }
+    clbk(err);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _generate(err);
+  });
+} else if (target === &#x22;amazon-fireos&#x22;) {
+  self.generateAmazonFireOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;firefoxos&#x22;) {
+  self.<span class="apidocCodeKeywordSpan">generateFirefoxOSIcon</span>(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;wp8&#x22;) {
+  self.generateWindowsPhone8Icon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateIOSIcon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateIOSIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.prototype.</span>generateIOSIcon
+        <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateIOSIcon = function (name, src, platforms, clbk) {
+  var dests = [{
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon.png&#x22;,
+      width: 57, height: 57
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-40.png&#x22;,
+      width: 40, height: 40
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-50.png&#x22;,
+      width: 50, height: 50
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-57.png&#x22;,
+      width: 57, height: 57
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-60.png&#x22;,
+      width: 60, height: 60
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-72.png&#x22;,
+      width: 72, height: 72
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-76.png&#x22;,
+      width: 76, height: 76
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-small.png&#x22;,
+      width: 29, height: 29
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/iTunesArtwork.png&#x22;,
+      width: 512, height: 512
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon@2x.png&#x22;,
+      width: 114, height: 114
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-40@2x.png&#x22;,
+      width: 80, height: 80
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-50@2x.png&#x22;,
+      width: 100, height: 100
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-57@2x.png&#x22;,
+      width: 114, height: 114
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-60@2x.png&#x22;,
+      width: 120, height: 120
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-72@2x.png&#x22;,
+      width: 144, height: 144
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-76@2x.png&#x22;,
+      width: 152, height: 152
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/icon-small@2x.png&#x22;,
+      width: 58, height: 58
+  }, {
+      dest: platforms + &#x22;/ios/&#x22; + name + &#x22;/Resources/icons/iTunesArtwork@2x.png&#x22;,
+      width: 1024, height: 1024
+  }];
+
+  this.resize(src, dests, { roundCorner: true }, clbk);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (target === &#x22;android&#x22;) {
+  self.generateAndroidIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;ios&#x22;) {
+  self.<span class="apidocCodeKeywordSpan">generateIOSIcon</span>(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;amazon-fireos&#x22;) {
+  self.generateAmazonFireOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;firefoxos&#x22;) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateWindowsPhone8Icon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.prototype.generateWindowsPhone8Icon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.prototype.</span>generateWindowsPhone8Icon
+        <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateWindowsPhone8Icon = function (name, src, platforms, clbk) {
+  var dests = [{
+      dest: platforms + &#x22;/wp8/ApplicationIcon.png&#x22;,
+      width: 62, height: 62
+  }];
+
+  this.resize(src, dests, clbk);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _generate(err);
+  });
+} else if (target === &#x22;firefoxos&#x22;) {
+  self.generateFirefoxOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;wp8&#x22;) {
+  self.<span class="apidocCodeKeywordSpan">generateWindowsPhone8Icon</span>(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else {
+  if (!self.silent) {
+    console.log(&#x22;Ignore &#x22; + target);
+  }
+  _generate();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-gen-icon.CordovaGenIcon.super_" id="apidoc.module.cordova-gen-icon.CordovaGenIcon.super_">module cordova-gen-icon.CordovaGenIcon.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.super_" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.super_">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GenIcon() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-gen-icon.CordovaGenIcon.super_.prototype" id="apidoc.module.cordova-gen-icon.CordovaGenIcon.super_.prototype">module cordova-gen-icon.CordovaGenIcon.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.convert" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.convert">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>convert
+        <span class="apidocSignatureSpan">(src, dest, width, height, options, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convert = function (src, dest, width, height, options, clbk) {
+  if (this.verbose) {
+    console.log();
+  }
+  if (!this.silent) {
+    console.log(dest);
+  }
+  if (this.verbose) {
+    console.log(&#x22;resize&#x22;);
+    console.log(&#x22;from  : &#x22; + src);
+    console.log(&#x22;dest  : &#x22; + dest);
+    console.log(&#x22;width : &#x22; + width);
+    console.log(&#x22;height: &#x22; + height);
+  }
+
+  if (clbk === undefined) {
+    clbk = options;
+    options = {};
+  }
+
+  var self = this,
+      dir = path.dirname(dest);
+  this.mkdir(dir, function(err) {
+    if (err &#x26;&#x26; err.code !== &#x22;EEXIST&#x22;) {
+      return clbk(err);
+    }
+    imagemagick.resize({
+      srcPath: src,
+      dstPath: dest,
+      width: width,
+      height: height + &#x22;!&#x22;,
+    }, function(err) {
+      if (err) {
+        clbk(err);
+      }
+
+      if (options &#x26;&#x26; options.roundCorner === true ) {
+        if (self.verbose) {
+          console.log(&#x22;convert round corner image&#x22;);
+          console.log(&#x22;from  : &#x22; + dest);
+          console.log(&#x22;dest  : &#x22; + dest);
+          console.log(&#x22;round : &#x22; + (height / 6.4));
+        }
+        imagemagick.convert([
+          &#x22;-size&#x22;, width + &#x22;x&#x22; + height,
+          &#x22;xc:none&#x22;,
+          &#x22;-fill&#x22;, dest,
+          &#x22;-draw&#x22;,
+          &#x22;roundRectangle 0,0 &#x22; + width + &#x22;,&#x22; + height + &#x22; &#x22; + (width / 6.4) + &#x22;,&#x22; + (height / 6.4),
+          dest
+        ], function(err) {
+          clbk(err);
+        });
+      } else if (options &#x26;&#x26; options.circle === true) {
+        if (self.verbose) {
+          console.log(&#x22;convert circle image&#x22;);
+          console.log(&#x22;from  : &#x22; + dest);
+          console.log(&#x22;dest  : &#x22; + dest);
+          console.log(&#x22;radius: &#x22; + (width / 2));
+        }
+        imagemagick.convert([
+          &#x22;-size&#x22;, width + &#x22;x&#x22; + height,
+          &#x22;xc:none&#x22;,
+          &#x22;-fill&#x22;, dest,
+          &#x22;-draw&#x22;,
+          &#x22;circle &#x22; + (width / 2) + &#x22;,&#x22; + (width / 2) + &#x22; &#x22; + (width / 2) + &#x22;,1&#x22;,
+          dest
+        ], function(err) {
+          clbk(err);
+        });
+      } else {
+        clbk(err);
+      }
+    });
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      if (options &#x26;&#x26; options.roundCorner === true ) {
+if (self.verbose) {
+  console.log(&#x22;convert round corner image&#x22;);
+  console.log(&#x22;from  : &#x22; + dest);
+  console.log(&#x22;dest  : &#x22; + dest);
+  console.log(&#x22;round : &#x22; + (height / 6.4));
+}
+imagemagick.<span class="apidocCodeKeywordSpan">convert</span>([
+  &#x22;-size&#x22;, width + &#x22;x&#x22; + height,
+  &#x22;xc:none&#x22;,
+  &#x22;-fill&#x22;, dest,
+  &#x22;-draw&#x22;,
+  &#x22;roundRectangle 0,0 &#x22; + width + &#x22;,&#x22; + height + &#x22; &#x22; + (width / 6.4) + &#x22;,&#x22; + (height / 6
+.4),
+  dest
+], function(err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generate" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generate">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generate
+        <span class="apidocSignatureSpan">(clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (clbk) {
+  var self = this,
+      src,
+      platformDir;
+
+  if (clbk === undefined) {
+    clbk = function(){};
+  }
+
+  platformDir = self.project + &#x22;/platforms&#x22;;
+
+  self.prepare(function(err) {
+    if (err) {
+      return clbk(err);
+    }
+
+    if (!self.silent) {
+      console.log(&#x22;Generate cordova icons with&#x22;);
+      console.log(&#x22;project: &#x22; + self.project);
+      console.log(&#x22;icon   : &#x22; + self.icon);
+      console.log(&#x22;target : &#x22; + self.targets);
+    }
+
+    var targets = [].concat(self.targets);
+    (function _generate(err){
+      if (err) {
+        return clbk(err);
+      }
+
+      var target = targets.shift();
+      if (target === null || target === undefined) {
+        return clbk();
+      }
+
+      fs.exists(platformDir + &#x22;/&#x22; + target, function(exists) {
+        if (exists) {
+          if (!self.silent) {
+            console.log();
+            console.log(&#x22;Generate &#x22; + target + &#x22; icon image files&#x22;);
+          }
+
+          if (target === &#x22;android&#x22;) {
+            self.generateAndroidIcon(self.name, self.icon, platformDir, function(err) {
+              _generate(err);
+            });
+          } else if (target === &#x22;ios&#x22;) {
+            self.generateIOSIcon(self.name, self.icon, platformDir, function(err) {
+              _generate(err);
+            });
+          } else if (target === &#x22;amazon-fireos&#x22;) {
+            self.generateAmazonFireOSIcon(self.name, self.icon, platformDir, function(err) {
+              _generate(err);
+            });
+          } else if (target === &#x22;firefoxos&#x22;) {
+            self.generateFirefoxOSIcon(self.name, self.icon, platformDir, function(err) {
+              _generate(err);
+            });
+          } else if (target === &#x22;wp8&#x22;) {
+            self.generateWindowsPhone8Icon(self.name, self.icon, platformDir, function(err) {
+              _generate(err);
+            });
+          } else {
+            if (!self.silent) {
+              console.log(&#x22;Ignore &#x22; + target);
+            }
+            _generate();
+          }
+        } else {
+          console.log(&#x22;platform \&#x22;&#x22; + target + &#x22;\&#x22; does not exist.&#x22;);
+          _generate();
+        }
+      });
+    })();
+
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* @file
+* cordova-gen-icon is Apache Cordova Icon Generator node module.
+* It generates the icon files for your project.
+*
+* @example
+* var genicon = require(&#x22;cordova-gen-icon&#x22;);
+* genicon.<span class="apidocCodeKeywordSpan">generate</span>(function(err) {
+*   if (err) {
+*     console.error(err);
+*   }
+* });
+* @author Naoki Takimura &#x3c;n.takimura@gmail.com&#x3e;
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateAmazonFireOSIcon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateAmazonFireOSIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generateAmazonFireOSIcon
+        <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateAmazonFireOSIcon = function (name, src, platforms, clbk) {
+  clbk(&#x22;this method must be implemented by child class.&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _generate(err);
+  });
+} else if (target === &#x22;ios&#x22;) {
+  self.generateIOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;amazon-fireos&#x22;) {
+  self.<span class="apidocCodeKeywordSpan">generateAmazonFireOSIcon</span>(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;firefoxos&#x22;) {
+  self.generateFirefoxOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;wp8&#x22;) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateAndroidIcon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateAndroidIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generateAndroidIcon
+        <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateAndroidIcon = function (name, src, platforms, clbk) {
+  clbk(&#x22;this method must be implemented by child class.&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (exists) {
+if (!self.silent) {
+  console.log();
+  console.log(&#x22;Generate &#x22; + target + &#x22; icon image files&#x22;);
+}
+
+if (target === &#x22;android&#x22;) {
+  self.<span class="apidocCodeKeywordSpan">generateAndroidIcon</span>(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;ios&#x22;) {
+  self.generateIOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;amazon-fireos&#x22;) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateFirefoxOSIcon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateFirefoxOSIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generateFirefoxOSIcon
+        <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateFirefoxOSIcon = function (name, src, platforms, clbk) {
+  clbk(&#x22;this method must be implemented by child class.&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _generate(err);
+  });
+} else if (target === &#x22;amazon-fireos&#x22;) {
+  self.generateAmazonFireOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;firefoxos&#x22;) {
+  self.<span class="apidocCodeKeywordSpan">generateFirefoxOSIcon</span>(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;wp8&#x22;) {
+  self.generateWindowsPhone8Icon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateIOSIcon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateIOSIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generateIOSIcon
+        <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateIOSIcon = function (name, src, platforms, clbk) {
+  clbk(&#x22;this method must be implemented by child class.&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (target === &#x22;android&#x22;) {
+  self.generateAndroidIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;ios&#x22;) {
+  self.<span class="apidocCodeKeywordSpan">generateIOSIcon</span>(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;amazon-fireos&#x22;) {
+  self.generateAmazonFireOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;firefoxos&#x22;) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateWindowsPhone8Icon" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.generateWindowsPhone8Icon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>generateWindowsPhone8Icon
+        <span class="apidocSignatureSpan">(name, src, platforms, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateWindowsPhone8Icon = function (name, src, platforms, clbk) {
+  clbk(&#x22;this method must be implemented by child class.&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _generate(err);
+  });
+} else if (target === &#x22;firefoxos&#x22;) {
+  self.generateFirefoxOSIcon(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else if (target === &#x22;wp8&#x22;) {
+  self.<span class="apidocCodeKeywordSpan">generateWindowsPhone8Icon</span>(self.name, self.icon, platformDir, function(err) {
+    _generate(err);
+  });
+} else {
+  if (!self.silent) {
+    console.log(&#x22;Ignore &#x22; + target);
+  }
+  _generate();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.mkdir" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.mkdir">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>mkdir
+        <span class="apidocSignatureSpan">(dir, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkdir = function (dir, clbk) {
+  var self = this;
+  fs.exists(path.dirname(dir), function(exists) {
+    if (!exists) {
+      self.mkdir(path.dirname(dir), function(err) {
+        if (err) {
+          return clbk(err);
+        }
+        self.mkdir(dir, function(err) {
+          clbk(err);
+        });
+      });
+    } else {
+      fs.mkdir(dir, function(err) {
+        clbk(err);
+      });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (clbk === undefined) {
+  clbk = options;
+  options = {};
+}
+
+var self = this,
+    dir = path.dirname(dest);
+this.<span class="apidocCodeKeywordSpan">mkdir</span>(dir, function(err) {
+  if (err &#x26;&#x26; err.code !== &#x22;EEXIST&#x22;) {
+    return clbk(err);
+  }
+  imagemagick.resize({
+    srcPath: src,
+    dstPath: dest,
+    width: width,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.prepare" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.prepare">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>prepare
+        <span class="apidocSignatureSpan">(clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prepare = function (clbk) {
+  var self = this;
+
+  fs.readFile(self.project + &#x22;/www/config.xml&#x22;, function(err, data) {
+    if (err) {
+      return clbk(err);
+    }
+    (new domjs.DomJS()).parse(data.toString(), function(err, dom) {
+      if (err) {
+        return clbk(err);
+      }
+
+      var i;
+
+      if (!self.icon) {
+        for (i in dom.children) {
+          if (dom.children[i].name === &#x22;icon&#x22; &#x26;&#x26;
+              dom.children[i].attributes[&#x22;gap:platform&#x22;] === undefined) {
+            self.icon = self.project + &#x22;/www/&#x22; + dom.children[i].attributes.src;
+            break;
+          }
+        }
+        if (self.icon === undefined) {
+          self.icon = self.project + &#x22;/www/img/logo.png&#x22;;
+        }
+      }
+
+      for (i in dom.children) {
+        if (dom.children[i].name === &#x22;name&#x22;) {
+          self.name = dom.children[i].children[0].text;
+        }
+      }
+      if (self.name === undefined) {
+        return clbk(&#x22;config.xml does not have \&#x22;name\&#x22; tag&#x22;);
+      }
+
+      if (self.targets !== undefined &#x26;&#x26; self.targets.length &#x3e; 0) {
+        clbk();
+      } else {
+        fs.readdir(self.project + &#x22;/platforms&#x22;, function(err, platforms) {
+          if (err) {
+            return clbk(err);
+          }
+          self.targets = [].concat(platforms);
+          clbk();
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (clbk === undefined) {
+clbk = function(){};
+  }
+
+  platformDir = self.project + &#x22;/platforms&#x22;;
+
+  self.<span class="apidocCodeKeywordSpan">prepare</span>(function(err) {
+if (err) {
+  return clbk(err);
+}
+
+if (!self.silent) {
+  console.log(&#x22;Generate cordova icons with&#x22;);
+  console.log(&#x22;project: &#x22; + self.project);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.resize" id="apidoc.element.cordova-gen-icon.CordovaGenIcon.super_.prototype.resize">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.CordovaGenIcon.super_.prototype.</span>resize
+        <span class="apidocSignatureSpan">(src, dests, options, clbk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resize = function (src, dests, options, clbk) {
+  var self = this,
+      targets = [].concat(dests);
+
+  if (clbk === undefined) {
+    clbk = options;
+    options = undefined;
+  }
+
+  (function _resize(err) {
+    if (err) {
+      return clbk(err);
+    }
+    var target = targets.shift();
+    if (target === null || target === undefined) {
+      return clbk(err);
+    }
+
+    self.convert(src, target.dest, target.width, target.height, options, function(err) {
+      _resize(err);
+    });
+  })();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     dest: platforms + &#x22;/amazon-fireos/res/drawable-hdpi/icon.png&#x22;,
+     width: 72, height: 72
+ }, {
+     dest: platforms + &#x22;/amazon-fireos/res/drawable-xhdpi/icon.png&#x22;,
+     width: 96, height: 96
+ }];
+
+ this.<span class="apidocCodeKeywordSpan">resize</span>(src, dests, clbk);
+};
+
+/**
+* generateFirefoxOSIcon generates the Firefox OS icon image files.
+* Thats images are trimed as circle automatically.
+* @summary Generate Firefox OS Icon.
+* @param {String} name projectn name.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-gen-icon.GenIcon" id="apidoc.module.cordova-gen-icon.GenIcon">module cordova-gen-icon.GenIcon</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.GenIcon.GenIcon" id="apidoc.element.cordova-gen-icon.GenIcon.GenIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.</span>GenIcon
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GenIcon() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-gen-icon.PhoneGapGenIcon" id="apidoc.module.cordova-gen-icon.PhoneGapGenIcon">module cordova-gen-icon.PhoneGapGenIcon</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-gen-icon.PhoneGapGenIcon.PhoneGapGenIcon" id="apidoc.element.cordova-gen-icon.PhoneGapGenIcon.PhoneGapGenIcon">
+        function <span class="apidocSignatureSpan">cordova-gen-icon.</span>PhoneGapGenIcon
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PhoneGapGenIcon(options) {
+  this.verbose = (options &#x26;&#x26; options.verbose !== undefined) ?
+      options.verbose : false;
+  this.project = (options &#x26;&#x26; options.project !== undefined) ?
+      options.project : &#x22;.&#x22;;
+  this.icon = (options &#x26;&#x26; options.icon !== undefined) ?
+      options.icon : this.project + &#x22;/www/img/logo.png&#x22;;
+
+  this.target = [];
+  if (options &#x26;&#x26; options.android === true) {
+    this.target.push(&#x22;android&#x22;);
+  }
+  if (options &#x26;&#x26; options.ios === true) {
+    this.target.push(&#x22;ios&#x22;);
+  }
+  if (options &#x26;&#x26; options.firefoxos === true) {
+    this.target.push(&#x22;firefoxos&#x22;);
+  }
+  if (options &#x26;&#x26; options.amazonfireos === true) {
+    this.target.push(&#x22;amazonfireos&#x22;);
+  }
+
+  if (this.verbose) {
+    console.log(&#x22;generate cordova icons with&#x22;);
+    console.log(&#x22;project: &#x22; + this.project);
+    console.log(&#x22;icon   : &#x22; + this.icon);
+    console.log(&#x22;target : &#x22; + this.target);
+    console.log();
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
